@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deals</title>
+    <link rel="stylesheet" href="volume.css" />
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container_btn">
+            <!-- <button class="btn_toggle"></button> -->
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div>
+            <img src="image/volumn.png" class="volumn_image">
+        </div>
+        <div class="slidecontainer">
+            <div class="volume_container">
+                <p class="start_vol"> 100% </p>
+                <p id="demo">100</p>
+                <p class=" end_vol">600%</p>
+            </div>
+            <input type="range" min="100" max="600" value="50" class="slider_vol" id="myRange">
+        </div>
+        <div>
+            <span class="vol_heading">Boost Sound Level</span>
+        </div>
+
+        <div class="active_on_head">
+            <span class="active_heading">Active On</span>
+        </div>
+        <div class="choice_btn">
+            <label class="container">Present Tab
+                <input type="radio" name="radio" checked>
+                <span class="check"></span>
+            </label>
+            <label class="container">Present Website
+                <input type="radio" name="radio">
+                <span class="check"></span>
+            </label>
+            <label class="container">All Website
+                <input type="radio" name="radio">
+                <span class="check"></span>
+            </label>
+
+        </div>
+        <div>
+            <button class="btn_abcd">Rate Us</button>
+        </div>
+        <div class="note_container">
+            <span class="note_container">Note: Reload the page, If extension is not working.</span>
+        </div>
+    </div>
+
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+    </script>
+
+</body>
+
+</html>
