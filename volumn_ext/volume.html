@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="volume.css" />
 </head>
 
 <body>
     <div class="main-container">
         <div class="container_btn">
-            <!-- <button class="btn_toggle"></button> -->
             <label class="switch">
                 <input type="checkbox" checked>
                 <span class="slider round"></span>
@@ -23,39 +23,24 @@
         </div>
         <div class="slidecontainer">
             <div class="volume_container">
-                <p class="start_vol"> 100% </p>
+                <p class="start_vol"> 0%</p>
                 <p id="demo">100</p>
                 <p class=" end_vol">600%</p>
             </div>
-            <input type="range" min="100" max="600" value="50" class="slider_vol" id="myRange">
+            <input type="range" min="0" max="600" value="100" class="slider_vol" id="myRange">
         </div>
         <div>
             <span class="vol_heading">Boost Sound Level</span>
         </div>
-
-        <div class="active_on_head">
-            <span class="active_heading">Active On</span>
+        <div class="page__rate_us">
+            <span>Rate this extension </span>
         </div>
-        <div class="choice_btn">
-            <label class="container">Present Tab
-                <input type="radio" name="radio" checked>
-                <span class="check"></span>
-            </label>
-            <label class="container">Present Website
-                <input type="radio" name="radio">
-                <span class="check"></span>
-            </label>
-            <label class="container">All Website
-                <input type="radio" name="radio">
-                <span class="check"></span>
-            </label>
-
-        </div>
-        <div>
-            <button class="btn_abcd">Rate Us</button>
-        </div>
-        <div class="note_container">
-            <span class="note_container">Note: Reload the page, If extension is not working.</span>
+        <div class="rating-wrapper">
+            <input type="radio" name="rating" id="star-1"><label for="star-1"></label>
+            <input type="radio" name="rating" id="star-2"><label for="star-2"></label>
+            <input type="radio" name="rating" id="star-3"><label for="star-3"></label>
+            <input type="radio" name="rating" id="star-4"><label for="star-4"></label>
+            <input type="radio" name="rating" id="star-5"><label for="star-5"></label>
         </div>
     </div>
 

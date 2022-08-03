@@ -2,14 +2,66 @@
 
 body {
     width: 316px;
-    height: 520px;
+    /* height: 520px; */
     background-color: #ffffff;
     border-radius: 10px;
     margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: 20px;
     padding: 0px;
     box-sizing: border-box;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+.checked {
+    color: orange;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.checked_box {
+    margin-left: 110px;
+}
+
+#demo {
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 10px;
+    padding-left: 13px;
+    padding-right: 12px;
+    margin-left: 86px;
+}
+
+.end_vol {
+    margin-left: 90px;
+    margin-right: 14px;
+    font-size: 11px;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+input:checked+.slider {
+    background-color: #f5422a;
+    margin-left: -7px;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.page__rate_us {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .switch {
@@ -45,20 +97,6 @@ body {
     transition: .4s;
 }
 
-input:checked+.slider {
-    background-color: #f5422a;
-}
-
-input:focus+.slider {
-    box-shadow: 0 0 1px #f5422a;
-}
-
-input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-
 /* Rounded sliders */
 .slider.round {
     border-radius: 34px;
@@ -92,14 +130,6 @@ input:checked+.slider:before {
     color: #000;
 }
 
-.volumn_image {
-    width: 96px;
-    height: 96px;
-    margin-left: 106px;
-    margin-right: 106px;
-    margin-top: 6px;
-}
-
 .slider_vol {
     -webkit-appearance: none;
     height: 10px;
@@ -112,7 +142,7 @@ input:checked+.slider:before {
     width: 295px;
     margin-right: 8px;
     margin-left: 8px;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .slider_vol:hover {
@@ -122,10 +152,10 @@ input:checked+.slider:before {
 .slider_vol::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
-    background: #f5422a;
+    background: #ff0600;
     cursor: pointer;
 }
 
@@ -133,29 +163,8 @@ input:checked+.slider:before {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #f5422a;
+    background: #ff0600;
     cursor: pointer;
-}
-
-.volume_container {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#demo {
-    background: #000;
-    color: #fff;
-    margin-left: 95px;
-    font-size: 15px;
-    font-family: 'Poppins';
-    font-weight: bold;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 6px;
-    padding-right: 6px;
-    border-radius: 10px;
 }
 
 .start_vol {
@@ -165,12 +174,11 @@ input:checked+.slider:before {
     font-weight: bold;
 }
 
-.end_vol {
-    margin-left: 90px;
-    margin-right: 14px;
-    font-size: 11px;
-    font-family: 'Poppins';
-    font-weight: bold;
+.volume_container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .vol_heading {
@@ -180,95 +188,57 @@ input:checked+.slider:before {
     font-weight: bold;
 }
 
-.active_on_head {
-    background-color: red;
-    height: 30px;
-    width: 130px;
-    border-radius: 15px;
-    margin-top: 18px;
-    margin-left: 90px;
-    text-align: center;
-    padding-top: 7px;
-    font-size: 15px;
-    font-family: 'Poppins';
-    font-weight: bold;
-    color: #fff;
+.volumn_image {
+    width: 96px;
+    height: 96px;
+    margin-left: 106px;
+    margin-right: 106px;
+    margin-top: 6px;
+}
+/* rate this extension */
+
+.rating-wrapper input{
+    direction: ltr;
 }
 
-.container {
-    display: block;
+.rating-wrapper input{ 
+    display: none;
+} 
+
+.rating-wrapper label {
+    display: inline-block;
+    width: 10px;
     position: relative;
-    padding-left: 40px;
-    margin-bottom: 20px;
     cursor: pointer;
-    font-size: 15px;
-    font-family: 'Poppins';
-    font-weight: bold;
+    padding-top: 58px;
+    margin-left: 18px;
+    left: 60px;
 }
 
-/* Hide the default radio button */
-.container input {
+.rating-wrapper label::before{
+    content: "\2605";
     position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-/* custom radio button */
-.check {
-    position: absolute;
+    font-size: 40px;
+    display: inline-block;
     top: 0;
     left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: lightgray;
-    border-radius: 50%;
 }
 
-.container:hover input~.check {
-    background-color: gray;
-}
 
-.container input:checked~.check {
-    background-color: red;
-}
-
-.check:after {
-    content: "";
+.rating-wrapper label::after{
+    content: "\2605";
     position: absolute;
-    display: none;
+    font-size: 40px;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    color: yellow;
+    opacity: 0;
 }
 
-.container input:checked~.check:after {
-    display: block;
-}
-
-.container .check:after {
-    border-radius: 50%;
-}
-
-.choice_btn {
-    margin-top: 20px;
-    margin-left: 30px;
-}
-
-.btn_abcd {
-    width: 150px;
-    height: 30px;
-    border: none;
-    border-radius: 20px;
-    align-items: center;
-    text-align: center;
-    margin-left: 90px;
-    background-color: #000;
-    color: #fff;
-    font-family: 'Poppins';
-    font-size: medium;
-    font-weight: 600;
-}
-
-.note_container {
-    text-align: center;
-    font-family: 'Poppins';
-    font-size: smaller;
-    margin-top: 18px;
-}
+.rating-wrapper label:hover::after,
+.rating-wrapper label:hover ~ label::after,
+.rating-wrapper label:checked ~ label::after  
+{
+    opacity: 1;
+} 
