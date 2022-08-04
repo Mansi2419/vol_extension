@@ -13,12 +13,6 @@ body {
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
 }
 
-.checked {
-    color: orange;
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-
 .checked_box {
     margin-left: 110px;
 }
